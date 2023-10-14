@@ -1,18 +1,20 @@
 import sys
 
-def calculate():
-
-    score = int(sys.stdin.readline())
-
+def get_grade(score):
     if score < 60:
-        print("F")
+        return "F"
     elif score < 70:
-        print("D")
+        return "D"
     elif score < 80:
-        print("C")
+        return "C"
     elif score < 90:
-        print("B")
+        return "B"
     else:
-        print("A")
-# 함수 호출
-calculate()
+        return "A"
+
+def main():
+    score = int(sys.stdin.readline())
+    print(get_grade(score))
+
+if __name__ == "__main__":
+    main()

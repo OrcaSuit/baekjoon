@@ -8,5 +8,5 @@ def calculate():
     for count in range(1, 10):
         print(f"{number} * {count} = {number*count}")
     
-# 함수 호출A
+# 함수 호출
 calculate()

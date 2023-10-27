@@ -1,4 +1,7 @@
 import time
+import sys
+
+sys.setrecursionlimit(10**6)
 
 def f(n, memo):
     if memo[n] is not None:

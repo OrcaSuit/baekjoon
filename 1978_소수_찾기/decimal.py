@@ -1,21 +1,17 @@
-import sys
+N = input()
+nums = list(map(int, input().split()))
 
-N = int(sys.stdin.readline())
-nums = list(map(int, sys.stdin.readline().split()))
+count = 0 
 
-
-print(N)
-print(nums)    
-
-
-#자연수 1을 제거
-
-#2를 제외한 2의 배수를 제거
-
-#3을 제외한 3의 배수를 제거
-
-#5를 제외한 5의 배수를 제거 
-
-#7를 제외한 7의 배수를 제거 
-
-
+for num in nums:
+    if num < 2:
+        continue
+    is_prime = True #소수인지 판별하는 변수를 초기화합니다.
+    for i in range(2, int(num ** 0.5)+1):
+        if num % 1 == 0:
+            is_prime = False
+            break
+    if is_prime:
+        count += 1
+    
+print(count) 
